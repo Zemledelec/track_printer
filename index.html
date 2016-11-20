@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>S4</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="./styles/s4.css" type="text/css" />
+    <script>window.L_PREFER_CANVAS = true;</script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/leaflet-image.js"></script>
+    <script src="./scripts/mapPrinter.js"></script>
+    <script src="./scripts/printableExtents.js"></script>
+    <script src="./scripts/trackPrinterControl.js"></script>
+</head>
+<body onload="main();">
+<div style="width:70%; height:100%;float:left">
+<div id="map"></div>
+</div>
+<div style="width:28%;height:100%;float:left; margin: 5px;">
+<div id="lbLoading" style="margin-bottom:15px; visibility: hidden">Loading...please wait.</div>
+<div style="float:left">Paper size: </div>
+<input id="paperWidth" type="text" value="297" style="margin: 0px 5px 15px 15px; width:50px"">mm.
+<input id="paperHeight" type="text" value="210" style="margin: 0px 5px 15px 15px; width:50px"">mm.
+<br/>
+Scale: 1:<input id="paperScale" type="text" value="2166714" style="margin: 0px 0px 15px 3px; width:100px""> ñm.
+<textarea id="txtTrackJSON" style="width:100%; height:25%; margin-bottom: 10px;"></textarea>
+<button onclick="loadTrack();">Load track</button>
+<button id="btnCover" onclick="cover();" disabled>Cover</button>
+</div>
+</body>
+</html>
